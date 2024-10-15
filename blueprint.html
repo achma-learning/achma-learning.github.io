@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Learning Hub - Blueprint</title>
     <style>
-        /* Styles similar to index.html */
+        /* Add your styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -37,13 +37,8 @@
         }
         main {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
             margin-bottom: 20px;
         }
         .high-frequency {
@@ -59,4 +54,57 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        .card:hover
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card-title {
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .card-content {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Medical Learning Hub - Blueprint</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aio.html">AIO</a>
+            <a href="try-again.html">Try Again</a>
+            <a href="blueprint.html">Blueprint</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Blueprint Section</h2>
+        <div class="high-frequency">
+            <div class="card">
+                <div class="card-title">Latest Medical News</div>
+                <div class="card-content">Stay updated with the latest medical news from reputable sources.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Research Updates</div>
+                <div class="card-content">Get the latest updates on medical research and findings.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Case Studies</div>
+                <div class="card-content">Explore insightful case studies for better understanding.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Clinical Guidelines</div>
+                <div class="card-content">Up-to-date clinical guidelines for common medical conditions.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Emergency Protocols</div>
+                <div class="card-content">Key protocols for managing medical emergencies effectively.</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
