@@ -118,6 +118,30 @@
             bottom: 0;
             width: 100%;
         }
+        /* New styles for news and weather sections */
+        .news-weather-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; /* Set max width for professionalism */
+            margin-top: 20px;
+        }
+        .news-container, .weather-container {
+            flex: 1;
+            margin-right: 10px; /* Space between sections */
+        }
+        .weather-container {
+            margin-left: 10px; /* Space between sections */
+        }
+        iframe {
+            width: 100%;
+            height: 650px; /* Increased height for better visibility */
+            border: none;
+        }
+        .weatherwidget-io {
+            width: 100%; /* Full width for the weather widget */
+            height: 300px; /* Fixed height for weather */
+        }
     </style>
 </head>
 <body>
@@ -166,12 +190,20 @@
             </div>
         </div>
 
-        <h3>News</h3>
-        <iframe src="https://www.mapexpress.ma/" title="Map Express News" style="width: 100%; height: 650px; border: none;"></iframe>
+        <div class="news-weather-container">
+            <div class="news-container">
+                <h3>News</h3>
+                <iframe src="https://www.mapexpress.ma/" title="Map Express News"></iframe>
+            </div>
 
-        <h3>Weather in Marrakech-Safi</h3>
-        <a class="weatherwidget-io" href="https://forecast7.com/en/31d6342d12/marrakech-safi/" data-label_1="Marrakech" data-label_2="Weather" data-theme="original">Marrakech Weather</a>
-        <script src="https://weatherwidget.io/js/widget.min.js"></script>
+            <div class="weather-container">
+                <h3>Weather in Marrakech-Safi</h3>
+                <a class="weatherwidget-io" href="https://forecast7.com/fr/31d73n8d13/marrakesh-safi/" data-label_1="Marrakech Safi" data-label_2="Morocco" data-theme="original">Marrakech Safi Morocco</a>
+                <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Medical Learning Hub. All rights reserved.</p>
