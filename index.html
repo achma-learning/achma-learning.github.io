@@ -103,7 +103,8 @@
             color: #007bff;
         }
         .important-links a {
-            display: block;
+            display: flex;
+            align-items: center;
             margin: 5px 0;
             color: #007bff;
             text-decoration: none;
@@ -111,9 +112,32 @@
             border-radius: 4px;
             transition: background-color 0.2s;
         }
+        .important-links a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
         .important-links a:hover {
             background-color: rgba(0, 123, 255, 0.1);
             text-decoration: underline;
+        }
+
+        /* Weather widget styles */
+        .weather-widget {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 1em;
         }
     </style>
 </head>
@@ -134,6 +158,17 @@
         <p style="font-size: 1.2em; font-weight: bold; text-align: center; margin-bottom: 20px;">
             Do your best every day, as God values your efforts more than the outcomes. Keep improving!
         </p>
+
+        <!-- Search Bar (Customized for Perplexity AI) -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for medical resources with Perplexity AI..." />
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="weather-widget">
+            <!-- Replace the script below with the actual weather widget code -->
+            <iframe src="https://widget-time.com/widgets/weather" width="300" height="250" frameborder="0"></iframe>
+        </div>
 
         <!-- Flexbox Container for Goals and Links -->
         <div class="content-container">
@@ -172,10 +207,22 @@
             <!-- Important Links Section -->
             <div class="important-links">
                 <h3>Important Links</h3>
-                <a href="https://amima-science.com/">AMIMA</a>
-                <a href="https://e-qe.online/">e-Qe</a>
-                <a href="https://thesefmpm.vercel.app/search">These 2.0</a>
-                <a href="https://www.sante.gov.ma/Publications/Guides-Manuels/Pages/default.aspx">Guides et Manuels - Ministère de la santé</a>
+                <a href="https://thesefmpm.vercel.app/search" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2992/2992174.png" alt="These 2.0 Icon">
+                    These 2.0
+                </a>
+                <a href="https://ucaacma-my.sharepoint.com/:f:/g/personal/m_acheghned2046_uca_ac_ma/ElXZ8HZUEbFInm3ejFBCg84BxoBUJg097P4sBsah7of2vg?e=wYFbi6" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5526/5526505.png" alt="Reference Icon">
+                    Reference
+                </a>
+                <a href="https://www.sante.gov.ma/Publications/Guides-Manuels/Pages/default.aspx" target="_blank">
+                    <img src="https://iconape.com/wp-content/files/ov/257650/svg/257650.svg" alt="Guides et Manuels Icon">
+                    Guide et Manuels - Ministère de la Santé
+                </a>
+                <a href="https://amima-science.com/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSav7OIqdUNNYRGfr_PfrfdohaYXhnKLYJAPA&s" alt="AMIMA Icon">
+                    AMIMA
+                </a>
             </div>
         </div>
     </main>
