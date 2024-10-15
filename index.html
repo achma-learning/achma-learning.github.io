@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Learning Hub</title>
+    <title>Medical Learning Hub - Home</title>
     <style>
+        /* Styles remain the same as before, so add the previous CSS here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Light background color */
-            color: #343a40; /* Dark text color for readability */
+            background-color: #f8f9fa;
+            color: #343a40;
         }
         header {
-            background-color: #007bff; /* Professional blue color */
+            background-color: #007bff;
             color: white;
             padding: 20px;
             display: flex;
@@ -38,10 +39,10 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align content */
+            align-items: center;
         }
         h2 {
-            border-bottom: 2px solid #007bff; /* Underline for section headings */
+            border-bottom: 2px solid #007bff;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
@@ -50,11 +51,11 @@
             align-items: center;
             border: 1px solid #dfe1e5;
             border-radius: 50px;
-            padding: 5px; /* Reduce padding */
+            padding: 5px;
             box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-            width: 500px; /* Fixed width for search box */
+            width: 500px;
             max-width: 100%;
-            margin-bottom: 20px; /* Space below search box */
+            margin-bottom: 20px;
         }
         input[type="text"] {
             border: none;
@@ -104,17 +105,9 @@
             margin-bottom: 10px;
         }
         .card-content {
-            color: #6c757d; /* Muted text color for content */
+            color: #6c757d;
             font-size: 0.9em;
             margin-bottom: 10px;
-        }
-        iframe {
-            width: 100%;
-            height: 600px; /* Adjust height as needed */
-            border: none; /* Remove default border */
-            border-radius: 8px; /* Rounded corners for iframe */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better look */
-            margin-top: 20px; /* Space above the iframe */
         }
         footer {
             text-align: center;
@@ -125,10 +118,6 @@
             bottom: 0;
             width: 100%;
         }
-        /* Medical icon style */
-        .medical-icon {
-            margin-right: 10px;
-        }
     </style>
 </head>
 <body>
@@ -137,17 +126,16 @@
             <h1>Medical Learning Hub</h1>
         </div>
         <nav>
-            <a href="#high-frequency">High Frequency</a>
-            <a href="#try-again">Try Again</a>
-            <a href="#aio">AIO</a>
+            <a href="index.html">Home</a>
+            <a href="aio.html">AIO</a>
+            <a href="try-again.html">Try Again</a>
+            <a href="blueprint.html">Blueprint</a>
         </nav>
     </header>
     <main>
-        <h2>Welcome to My Personal Start Page!</h2>
-        <p>This is a hub for medical knowledge, resources, and tools tailored for learning and urgent care practice.</p>
-
+        <h2>High Frequency</h2>
+        <h3>Latest Updates</h3>
         <div class="search-box">
-            <!-- Medical icon -->
             <img src="https://img.icons8.com/ios/50/000000/stethoscope.png" class="medical-icon" alt="Medical Icon" width="30" height="30">
             <form action="https://www.perplexity.ai/search" method="GET" style="display: flex; width: 100%;">
                 <input type="text" name="q" placeholder="Search medical insights...">
@@ -155,8 +143,19 @@
             </form>
         </div>
 
-        <h2 id="high-frequency">High Frequency</h2>
         <div class="high-frequency">
+            <div class="card">
+                <div class="card-title">Latest Medical News</div>
+                <div class="card-content">Stay updated with the latest medical news from reputable sources.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Research Updates</div>
+                <div class="card-content">Get the latest updates on medical research and findings.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Case Studies</div>
+                <div class="card-content">Explore insightful case studies for better understanding.</div>
+            </div>
             <div class="card">
                 <div class="card-title">Clinical Guidelines</div>
                 <div class="card-content">Up-to-date clinical guidelines for common medical conditions.</div>
@@ -165,22 +164,14 @@
                 <div class="card-title">Emergency Protocols</div>
                 <div class="card-content">Key protocols for managing medical emergencies effectively.</div>
             </div>
-            <div class="card">
-                <div class="card-title">Pharmacology Essentials</div>
-                <div class="card-content">Essential information on commonly used medications.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Diagnostic Tools</div>
-                <div class="card-content">Overview of diagnostic tools and techniques in urgent care.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Patient Assessment</div>
-                <div class="card-content">Strategies for effective patient assessment and management.</div>
-            </div>
         </div>
 
-        <h2>Latest News</h2>
-        <iframe src="https://www.mapexpress.ma/" title="Map Express News"></iframe>
+        <h3>News</h3>
+        <iframe src="https://www.mapexpress.ma/" title="Map Express News" style="width: 100%; height: 650px; border: none;"></iframe>
+
+        <h3>Weather in Marrakech-Safi</h3>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/31d6342d12/marrakech-safi/" data-label_1="Marrakech" data-label_2="Weather" data-theme="original">Marrakech Weather</a>
+        <script src="https://weatherwidget.io/js/widget.min.js"></script>
     </main>
     <footer>
         <p>&copy; 2024 Medical Learning Hub. All rights reserved.</p>
