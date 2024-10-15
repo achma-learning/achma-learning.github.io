@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Learning Hub - Home</title>
     <style>
-        /* Styles remain the same as before */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -37,51 +36,11 @@
         }
         main {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         h2 {
             border-bottom: 2px solid #007bff;
             padding-bottom: 10px;
             margin-bottom: 20px;
-        }
-        .search-box {
-            display: flex;
-            align-items: center;
-            border: 1px solid #dfe1e5;
-            border-radius: 50px;
-            padding: 5px;
-            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-            width: 500px;
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            border: none;
-            outline: none;
-            font-size: 18px;
-            padding: 10px;
-            width: 100%;
-            border-radius: 50px;
-            background-color: transparent;
-        }
-        input[type="text"]::placeholder {
-            color: #757575;
-        }
-        button {
-            border: none;
-            outline: none;
-            background-color: #4285f4;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-        button:hover {
-            background-color: #357ae8;
         }
         footer {
             text-align: center;
@@ -92,62 +51,69 @@
             bottom: 0;
             width: 100%;
         }
-        /* New styles for news and weather sections */
-        .news-weather-container {
+        /* Flexbox container for goals and links */
+        .content-container {
             display: flex;
             justify-content: space-between;
-            width: 100%;
-            max-width: 1200px; /* Set max width for professionalism */
-            margin-top: 20px;
-            position: relative; /* Set relative positioning for absolute children */
+            gap: 20px;
         }
-        .news-container, .weather-container {
-            flex: 1;
-            margin-right: 10px; /* Space between sections */
+        /* Daily Program Section Styles */
+        .goal-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Occupies 70% of the space */
         }
-        .weather-container {
-            margin-left: 10px; /* Space between sections */
+        .goal-section h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
         }
-        iframe {
-            width: 100%;
-            height: 650px; /* Increased height for better visibility */
-            border: none;
+        .goal-section ul {
+            list-style: none;
+            padding: 0;
         }
-        .weatherwidget-io {
-            width: 100%; /* Full width for the weather widget */
-            height: 300px; /* Fixed height for weather */
+        .goal-section ul li {
+            margin-bottom: 15px;
         }
-        /* Styles for important links as bookmarks */
+        .goal-section ul li strong {
+            color: #343a40;
+            font-weight: bold;
+        }
+        .goal-section ul li em {
+            display: block;
+            color: #007bff;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        /* Important Links Section */
         .important-links {
-            position: absolute;
-            top: 50px; /* Adjusted distance from the top */
-            right: 10px; /* Distance from the right */
-            padding: 15px;
-            background-color: #fff; /* White background for contrast */
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-left: 5px solid #007bff; /* Bookmark-like left border */
-            width: 200px; /* Fixed width for better layout */
-            z-index: 10; /* Ensure it appears above other content */
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 25%; /* Occupies 25% of the space */
         }
         .important-links h3 {
             margin: 0 0 10px 0;
             font-size: 1.2em;
-            font-weight: bold; /* Make the title stand out */
-            color: #007bff; /* Match color with theme */
+            font-weight: bold;
+            color: #007bff;
         }
         .important-links a {
             display: block;
             margin: 5px 0;
             color: #007bff;
             text-decoration: none;
-            padding: 5px; /* Padding for clickable area */
-            border-radius: 4px; /* Slight rounding for links */
-            transition: background-color 0.2s; /* Smooth transition for hover effect */
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
         }
         .important-links a:hover {
-            background-color: rgba(0, 123, 255, 0.1); /* Light hover effect */
-            text-decoration: underline; /* Underline on hover */
+            background-color: rgba(0, 123, 255, 0.1);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -169,40 +135,52 @@
             Do your best every day, as God values your efforts more than the outcomes. Keep improving!
         </p>
 
-        <div class="search-box">
-            <img src="https://img.icons8.com/ios/50/000000/stethoscope.png" class="medical-icon" alt="Medical Icon" width="30" height="30">
-            <form action="https://www.perplexity.ai/search" method="GET" style="display: flex; width: 100%;">
-                <input type="text" name="q" placeholder="Search medical insights...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-
-        <div class="news-weather-container">
-            <div class="news-container">
-                <h3>News</h3>
-                <iframe src="https://www.mapexpress.ma/" title="Map Express News"></iframe>
+        <!-- Flexbox Container for Goals and Links -->
+        <div class="content-container">
+            <!-- Daily Program Section -->
+            <div class="goal-section">
+                <h3>Daily Program - Internalize and Master</h3>
+                <ul>
+                    <li>
+                        <strong>Sleep-Wake Mastery:</strong> 
+                        Sleep by 23:00 or 00:00, rise at 05:00 or 06:00. This routine strengthens your body and mind. <br>
+                        <em>I control my time and energy. Each day begins with clarity.</em>
+                    </li>
+                    <li>
+                        <strong>Mental Clarity and Focus:</strong> 
+                        Set goals, walk for 15 minutes, visualize success. Your focus sharpens with each step. <br>
+                        <em>My focus is strong, my vision guides me forward.</em>
+                    </li>
+                    <li>
+                        <strong>Deep Work Immersion:</strong> 
+                        Dedicate 4 hours to focused work. Eliminate distractions. Each task builds mastery. <br>
+                        <em>I am immersed in my work, growing every moment.</em>
+                    </li>
+                    <li>
+                        <strong>Physical Discipline:</strong> 
+                        Perform 50 push-ups and squats. Strength in the body mirrors strength in the mind. <br>
+                        <em>My body is strong, my mind is disciplined.</em>
+                    </li>
+                    <li>
+                        <strong>Skill and Mastery:</strong> 
+                        Spend 20 minutes to 1 hour daily learning, or review with Anki. Every day you grow closer to mastery. <br>
+                        <em>Each day I learn, I grow in skill and competence.</em>
+                    </li>
+                </ul>
             </div>
 
-            <div class="weather-container">
-                <h3>Weather in Marrakech-Safi</h3>
-                <a class="weatherwidget-io" href="https://forecast7.com/fr/31d73n8d13/marrakesh-safi/" data-label_1="Marrakech Safi" data-label_2="Morocco" data-theme="original">Marrakech Safi Morocco</a>
-                <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                </script>
+            <!-- Important Links Section -->
+            <div class="important-links">
+                <h3>Important Links</h3>
+                <a href="https://amima-science.com/">AMIMA</a>
+                <a href="https://e-qe.online/">e-Qe</a>
+                <a href="https://thesefmpm.vercel.app/search">These 2.0</a>
+                <a href="https://www.sante.gov.ma/Publications/Guides-Manuels/Pages/default.aspx">Guides et Manuels - Ministère de la santé</a>
             </div>
-        </div>
-
-        <!-- Important Links Section -->
-        <div class="important-links">
-            <h3>Important Links</h3>
-            <a href="https://amima-science.com/">AMIMA</a>
-            <a href="https://e-qe.online/">e-Qe</a>
-            <a href="https://thesefmpm.vercel.app/search">These 2.0</a>
-            <a href="https://www.sante.gov.ma/Publications/Guides-Manuels/Pages/default.aspx">Guides et Manuels - Ministère de la santé</a>
         </div>
     </main>
     <footer>
-                <p style="margin-top: 10px;">The future is independent of the past, given the present.</p>
+        <p style="margin-top: 10px;">The future is independent of the past, given the present.</p>
     </footer>
 </body>
 </html>
