@@ -3,135 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socials</title>
+    <title>My Startup Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f8f9fa;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .socials-section {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
             max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            gap: 20px; /* Space between columns */
+        }
+
+        /* Left Column: Habits */
+        .habits-section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: 600px; /* Increased height for the habits section */
+            overflow-y: auto; /* Scroll if content exceeds the height */
+        }
+
+        .habits-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .habit-item {
+            margin-bottom: 15px;
+        }
+
+        .habit-item iframe {
+            width: 100%;
+            height: 400px; /* Increased height for each iframe */
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Right Column: Socials */
+        .socials-section {
             text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .socials-section h2 {
-            color: #007bff;
+            font-size: 2rem;
             margin-bottom: 20px;
+            color: #007bff;
         }
 
         .socials-grid {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-item {
-            width: 100px;
-            text-align: center;
-        }
-
-        .social-item img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .social-item img:hover {
-            transform: scale(1.1);
+            flex-direction: column;
+            gap: 10px;
         }
 
         .social-item a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             text-decoration: none;
+            font-size: 1.2rem;
             color: #343a40;
-            font-size: 14px;
-            margin-top: 5px;
-            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .social-item a:hover {
+            color: #007bff;
+        }
+
+        .social-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-item a:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-
-    <section class="socials-section">
-        <h2>Socials</h2>
-        <div class="socials-grid">
-            <!-- Social Links -->
-            <div class="social-item">
-                <a href="https://www.instagram.com/medmoreclub/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/medmore.png" alt="Medmore">
-                    Insta - Medmore
-                </a>
+    <div class="container">
+        <!-- Left Column: Habits -->
+        <section class="habits-section">
+            <h2>My Habits</h2>
+            <div class="habit-item">
+                <iframe src="https://lifeofdiscipline.com/notion/habit/cly8ap5q30002ky0fpspwzbxw?darkTheme=0&key=cm0emwrc900000gl48y2mev9l" title="Habit Tracker 1"></iframe>
             </div>
-
-            <div class="social-item">
-                <a href="https://web.facebook.com/MedMoreFMPM" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/medmore.png" alt="Medmore">
-                    fb - Medmore
-                </a>
+            <div class="habit-item">
+                <iframe src="https://lifeofdiscipline.com/notion/habit/cly8avl0c0001jr0fm9f3f1la?darkTheme=0&key=cm0emy17600000fl37loyfph0" title="Habit Tracker 2"></iframe>
             </div>
-
-            <div class="social-item">
-                <a href="https://web.facebook.com/bahja.association" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BAHJA.png" alt="BAHJA">
-                    fb - BAHJA
-                </a>
+            <div class="habit-item">
+                <iframe src="https://lifeofdiscipline.com/notion/habit/cly8b0bzf0004ky0f2bc4r21n?darkTheme=0&key=cm2bllvwr00010clff40da3k0" title="Habit Tracker 3"></iframe>
             </div>
+        </section>
 
-            <div class="social-item">
-                <a href="https://www.instagram.com/bahja.association/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BAHJA.png" alt="BAHJA">
-                    Insta - BAHJA
-                </a>
+        <!-- Right Column: Socials -->
+        <section class="socials-section">
+            <h2>Socials</h2>
+            <div class="socials-grid">
+                <div class="social-item">
+                    <a href="https://www.instagram.com/medmoreclub/" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/medmore.png" alt="Medmore">
+                        Insta - Medmore
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://web.facebook.com/MedMoreFMPM" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/medmore.png" alt="Medmore">
+                        FB - Medmore
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://web.facebook.com/bahja.association" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BAHJA.png" alt="Bahja">
+                        FB - Bahja
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.instagram.com/bahja.association/" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BAHJA.png" alt="Bahja">
+                        Insta - Bahja
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://web.facebook.com/internesmarrakech" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AMIMA.png" alt="AMIMA">
+                        FB - AMIMA
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.instagram.com/amima.science/" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AMIMA.png" alt="AMIMA">
+                        Insta - AMIMA
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://web.facebook.com/BDEMEDIA" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BDE.png" alt="BDE">
+                        FB - BDE
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.instagram.com/bde_fmpm" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BDE.png" alt="BDE">
+                        Insta - BDE
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.instagram.com/aem.marrakech" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AEM.png" alt="AEM">
+                        Insta - AEM
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://web.facebook.com/aemm.ifmsa" target="_blank">
+                        <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AEM.png" alt="AEM">
+                        FB - AEM
+                    </a>
+                </div>
             </div>
-
-            <div class="social-item">
-                <a href="https://web.facebook.com/internesmarrakech" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AMIMA.png" alt="AMIMA">
-                    fb - AMIMA
-                </a>
-            </div>
-
-            <div class="social-item">
-                <a href="https://www.instagram.com/amima.science/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AMIMA.png" alt="AMIMA">
-                    Insta - AMIMA
-                </a>
-            </div>
-
-            <div class="social-item">
-                <a href="https://web.facebook.com/BDEMEDIA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BDE.png" alt="BDE">
-                    fb - BDE
-                </a>
-            </div>
-
-            <div class="social-item">
-                <a href="https://www.instagram.com/bde_fmpm" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/BDE.png" alt="BDE">
-                    Insta - BDE
-                </a>
-            </div>
-
-            <div class="social-item">
-                <a href="https://www.instagram.com/aem.marrakech" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AEM.png" alt="AEM">
-                    Insta - AEM
-                </a>
-            </div>
-
-            <div class="social-item">
-                <a href="https://web.facebook.com/aemm.ifmsa" target="_blank">
-                    <img src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/refs/heads/main/images/AEM.png" alt="AEM">
-                    fb - AEM
-                </a>
-            </div>
-        </div>
-    </section>
-
+            <footer>
+                &copy; 2024 Social Links - Built by Achma Learning
+            </footer>
+        </section>
+    </div>
 </body>
 </html>
