@@ -54,6 +54,14 @@
         li {
             margin-bottom: 10px; /* Spacing between list items */
         }
+
+        video {
+            width: 50%; /* Reduce video width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 400px; /* Maximum width to ensure it's not too large */
+            display: block;
+            margin: 0px auto; /* Center video and add margin */
+        }
     </style>
 </head>
 <body>
@@ -91,7 +99,10 @@
             </ul>
             <!-- Empty section under Ressources - update -->
             <div class="empty-section" style="margin-top: 20px;">
-                <!-- Add content later -->
+                <video controls>
+                    <source src="https://raw.githubusercontent.com/achma-learning/achma-learning.github.io/main/sound%20and%20video/Une%20journ%C3%A9e%20normal%20de%20r%C3%A9vision%20en%20m%C3%A9decine%20%EF%BC%9A%20partie%203%20%EF%BF%BC-CTYB39Mf400.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
