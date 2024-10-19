@@ -3,108 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Learning Hub - Blueprint</title>
+    <title>Updated Medical Guidelines & Radiopaedia</title>
     <style>
-        /* Add your styles here */
         body {
-            font-family: Arial, sans-serif;
+            background-color: #000033;
+            color: #b0c4de;
+            font-family: monospace;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
         }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
+        .container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-        }
-        nav {
-            display: flex;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        main {
             padding: 20px;
         }
-        h2 {
-            margin-bottom: 20px;
+        .column {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #666;
+            background-color: #000040;
+            margin: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
-        .high-frequency {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        h1, h2 {
+            color: #66ccff;
         }
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+        a {
+            color: #66ccff;
+            text-decoration: none;
         }
-        .card:hover {
-            transform: scale(1.02);
+        a:hover {
+            text-decoration: underline;
         }
-        .card-title {
-            font-weight: bold;
-            font-size: 1.4em;
-            margin-bottom: 10px;
+        ul {
+            padding: 0;
+            list-style-type: none;
         }
-        .card-content {
-            color: #6c757d;
-            font-size: 0.9em;
-            margin-bottom: 10px;
+        li {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Medical Learning Hub - Blueprint</h1>
+
+    <div class="container">
+        <!-- First Column -->
+        <div class="column">
+            <h2>Simulation</h2>
+            <ul>
+                <li><a href="https://example.com">Medical Case Simulations</a></li>
+                <li><a href="https://example.com">Urgent Care Scenarios</a></li>
+                <li><a href="https://example.com">Emergency Procedures</a></li>
+            </ul>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="aio.html">AIO</a>
-            <a href="try-again.html">Try Again</a>
-            <a href="blueprint.html">Blueprint</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Blueprint Section</h2>
-        <div class="high-frequency">
-            <div class="card">
-                <div class="card-title">Latest Medical News</div>
-                <div class="card-content">Stay updated with the latest medical news from reputable sources.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Research Updates</div>
-                <div class="card-content">Get the latest updates on medical research and findings.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Case Studies</div>
-                <div class="card-content">Explore insightful case studies for better understanding.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Clinical Guidelines</div>
-                <div class="card-content">Up-to-date clinical guidelines for common medical conditions.</div>
-            </div>
-            <div class="card">
-                <div class="card-title">Emergency Protocols</div>
-                <div class="card-content">Key protocols for managing medical emergencies effectively.</div>
-            </div>
+
+        <!-- Second Column -->
+        <div class="column">
+            <h1>General Practice Guidelines</h1>
+            <h2>Updated Guidelines</h2>
+            <ul>
+                <li><a href="https://www.who.int/health-topics" target="_blank">World Health Organization (WHO) Guidelines</a></li>
+                <li><a href="https://www.nice.org.uk/guidance" target="_blank">NICE Clinical Guidelines</a></li>
+                <li><a href="https://emedicine.medscape.com/" target="_blank">Medscape General Practice Guidelines</a></li>
+                <li><a href="https://www.cdc.gov" target="_blank">CDC General Practice Updates</a></li>
+            </ul>
+
+            <h2>Radiopaedia Lecture Collections</h2>
+            <ul>
+                <li><a href="https://radiopaedia.org/courses/lecture-collections" target="_blank">Radiopaedia - Lecture Collections</a></li>
+            </ul>
         </div>
-    </main>
+
+        <!-- Third Column -->
+        <div class="column">
+            <h2>Resources - Update</h2>
+            <ul>
+                <li><a href="https://example.com">Medical Backup Collections</a></li>
+                <li><a href="https://example.com">Textbook Resources</a></li>
+                <li><a href="https://example.com">Guideline Archives</a></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
